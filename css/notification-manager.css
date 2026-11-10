@@ -1,0 +1,170 @@
+
+/* =========================================================
+   SUPER RUMMY — FILE 80
+   File: css/notification-manager.css
+   Purpose: Premium Toast Notification Styling
+   ========================================================= */
+
+.sr-notification-container {
+  position: fixed;
+  top: max(18px, env(safe-area-inset-top));
+  right: 18px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  width: min(380px, calc(100vw - 36px));
+  pointer-events: none;
+}
+
+.sr-notification {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 15px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 180, 91, 0.3);
+  border-radius: 14px;
+  color: #f7f1df;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 54, 40, 0.98),
+    rgba(7, 27, 21, 0.98)
+  );
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateX(25px) scale(0.97);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  pointer-events: auto;
+}
+
+.sr-notification.is-visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.sr-notification-icon {
+  display: flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #172318;
+  background: #d9b45b;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.sr-notification-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.sr-notification-title {
+  color: #f3d98b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sr-notification-message {
+  color: #e8eee9;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.sr-notification-close {
+  display: flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  color: #c7d2ca;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.sr-notification-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Success */
+
+.sr-notification-success {
+  border-left: 4px solid #65c58a;
+}
+
+.sr-notification-success .sr-notification-icon {
+  background: #65c58a;
+}
+
+/* Error */
+
+.sr-notification-error {
+  border-left: 4px solid #e47777;
+}
+
+.sr-notification-error .sr-notification-icon {
+  color: #ffffff;
+  background: #bd4545;
+}
+
+/* Warning */
+
+.sr-notification-warning {
+  border-left: 4px solid #e8b85b;
+}
+
+.sr-notification-warning .sr-notification-icon {
+  background: #e8b85b;
+}
+
+/* Information */
+
+.sr-notification-info {
+  border-left: 4px solid #73b8d9;
+}
+
+.sr-notification-info .sr-notification-icon {
+  background: #73b8d9;
+}
+
+/* Mobile layout */
+
+@media (max-width: 480px) {
+  .sr-notification-container {
+    top: max(12px, env(safe-area-inset-top));
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
+
+  .sr-notification {
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-notification {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ================= FILE 80 END ================= */
