@@ -1,0 +1,293 @@
+
+/* =========================================================
+   SUPER RUMMY
+   FILE 66: mode-selection-screen.css
+   PATH: css/mode-selection-screen.css
+   PURPOSE: Premium Game Mode Selection Design
+   ========================================================= */
+
+.sr-mode-selection {
+  --mode-gold: #dfbd78;
+  --mode-gold-light: #f4dda6;
+  --mode-bg: #07150f;
+  --mode-panel: #122a1e;
+  --mode-muted: #a9b7ad;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #fff8e9;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(38, 105, 73, 0.25),
+      transparent 55%
+    ),
+    var(--mode-bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.sr-mode-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sr-mode-back {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border: 1px solid rgba(223, 189, 120, 0.4);
+  border-radius: 13px;
+  background: var(--mode-panel);
+  color: var(--mode-gold-light);
+  font-size: 23px;
+  cursor: pointer;
+  transition: 160ms ease;
+}
+
+.sr-mode-back:hover {
+  border-color: var(--mode-gold);
+  background: #204532;
+}
+
+.sr-mode-eyebrow {
+  color: var(--mode-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sr-mode-header h1 {
+  margin: 5px 0 0;
+  color: #fff1d0;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+/* SECTION HEADINGS */
+
+.sr-mode-options,
+.sr-mode-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sr-mode-options h2,
+.sr-mode-settings h2 {
+  margin: 0;
+  color: var(--mode-gold-light);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+/* MODE GRID */
+
+.sr-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sr-mode-option {
+  min-height: 112px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+  padding: 16px;
+  border: 1px solid rgba(223, 189, 120, 0.2);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #162f23, #0c1e15);
+  color: #fff7e7;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.sr-mode-option:hover {
+  border-color: rgba(223, 189, 120, 0.65);
+  background: linear-gradient(145deg, #204532, #12291d);
+  transform: translateY(-2px);
+}
+
+.sr-mode-option.is-selected {
+  border-color: var(--mode-gold);
+  background: linear-gradient(145deg, #285139, #142e20);
+  box-shadow: inset 0 0 0 1px rgba(223, 189, 120, 0.18);
+}
+
+.sr-mode-option-name {
+  color: var(--mode-gold-light);
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sr-mode-option-description {
+  color: var(--mode-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* SETTINGS */
+
+.sr-mode-settings {
+  padding: 19px;
+  border: 1px solid rgba(223, 189, 120, 0.25);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #142b20, #0b1d14);
+}
+
+.sr-mode-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.sr-mode-field > span {
+  color: #e8dfcb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sr-mode-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid rgba(223, 189, 120, 0.35);
+  border-radius: 11px;
+  outline: none;
+  background: #0b1b13;
+  color: #fff4dc;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sr-mode-field select:focus {
+  border-color: var(--mode-gold);
+  box-shadow: 0 0 0 2px rgba(223, 189, 120, 0.12);
+}
+
+.sr-mode-field select option {
+  background: #10271b;
+  color: #fff4dc;
+}
+
+.sr-mode-free-notice {
+  padding: 12px 8px;
+  border: 1px solid rgba(105, 174, 122, 0.3);
+  border-radius: 10px;
+  background: rgba(43, 112, 66, 0.13);
+  color: #a9d7b1;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* START BUTTON */
+
+.sr-mode-start {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 20px;
+  border: 1px solid #f1d69a;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #efd18c, #b58a48);
+  color: #201708;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  transition: 180ms ease;
+}
+
+.sr-mode-start:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.sr-mode-start:active {
+  transform: scale(0.98);
+}
+
+/* STATUS MESSAGE */
+
+.sr-mode-message {
+  min-height: 16px;
+  margin: -15px 0 0;
+  color: var(--mode-gold);
+  font-size: 11px;
+  text-align: center;
+}
+
+/* HIDDEN SETTINGS */
+
+.sr-mode-field[hidden] {
+  display: none !important;
+}
+
+/* ACCESSIBILITY */
+
+.sr-mode-selection button:focus-visible {
+  outline: 2px solid var(--mode-gold-light);
+  outline-offset: 3px;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 420px) {
+  .sr-mode-selection {
+    padding: 15px;
+    gap: 19px;
+  }
+
+  .sr-mode-header h1 {
+    font-size: 21px;
+  }
+
+  .sr-mode-option {
+    min-height: 105px;
+    padding: 12px;
+  }
+
+  .sr-mode-option-name {
+    font-size: 14px;
+  }
+
+  .sr-mode-option-description {
+    font-size: 10px;
+  }
+
+  .sr-mode-settings {
+    padding: 15px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-mode-selection *,
+  .sr-mode-selection *::before,
+  .sr-mode-selection *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ================= FILE ENDING ================= */
+    
