@@ -1,0 +1,158 @@
+
+/* =========================================================
+   SUPER RUMMY — FILE 83
+   File: css/modal-manager.css
+   Purpose: Premium Modal and Dialog Styling
+   ========================================================= */
+
+.sr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 11000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  animation: sr-modal-fade-in 180ms ease-out;
+}
+
+.sr-modal-dialog {
+  width: min(100%, 440px);
+  max-height: min(85vh, 650px);
+  overflow-y: auto;
+  padding: 26px;
+  border: 1px solid rgba(217, 180, 91, 0.5);
+  border-radius: 20px;
+  color: #f7f1df;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(52, 108, 75, 0.3),
+      transparent 55%
+    ),
+    linear-gradient(145deg, #153b2b, #071b15);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  animation: sr-modal-enter 220ms ease-out;
+}
+
+.sr-modal-title {
+  margin: 0 0 17px;
+  color: #f3d98b;
+  font-size: 21px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.sr-modal-content {
+  margin-bottom: 25px;
+  color: #e0e9e2;
+  font-size: 14px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.sr-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sr-modal-actions button {
+  flex: 1;
+  min-height: 46px;
+  padding: 11px 16px;
+  border-radius: 11px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.sr-modal-cancel {
+  border: 1px solid rgba(217, 180, 91, 0.45);
+  color: #f3d98b;
+  background: rgba(217, 180, 91, 0.08);
+}
+
+.sr-modal-confirm {
+  border: 1px solid #f1d58d;
+  color: #172318;
+  background: linear-gradient(135deg, #f3dc98, #c69b42);
+  box-shadow: 0 5px 16px rgba(198, 155, 66, 0.17);
+}
+
+.sr-modal-actions button:hover {
+  filter: brightness(1.08);
+}
+
+.sr-modal-actions button:active {
+  transform: scale(0.97);
+}
+
+.sr-modal-actions button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@keyframes sr-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sr-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .sr-modal-backdrop {
+    padding: 15px;
+  }
+
+  .sr-modal-dialog {
+    padding: 21px 17px;
+    border-radius: 17px;
+  }
+
+  .sr-modal-title {
+    font-size: 19px;
+  }
+
+  .sr-modal-actions {
+    gap: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-modal-backdrop,
+  .sr-modal-dialog {
+    animation: none;
+  }
+
+  .sr-modal-actions button {
+    transition: none;
+  }
+}
+
+/* ================= FILE 83 END ================= */
