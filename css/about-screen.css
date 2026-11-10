@@ -1,0 +1,272 @@
+
+/* =========================================================
+   SUPER RUMMY — ABOUT SCREEN STYLES
+   FILE: css/about-screen.css
+   ========================================================= */
+
+.sr-about-screen {
+  --about-bg: #071b16;
+  --about-panel: #102820;
+  --about-gold: #d9b66b;
+  --about-text: #f7f1df;
+  --about-muted: #a8b8ad;
+  --about-border: rgba(217, 182, 107, 0.2);
+
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px 32px;
+  color: var(--about-text);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(47, 112, 76, 0.3),
+      transparent 45%
+    ),
+    var(--about-bg);
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+.sr-about-screen * {
+  box-sizing: border-box;
+}
+
+.sr-about-header {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sr-about-back {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid var(--about-border);
+  border-radius: 14px;
+  color: var(--about-gold);
+  background: var(--about-panel);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.sr-about-back:hover {
+  background: #1b3b2d;
+}
+
+.sr-about-eyebrow {
+  margin: 0 0 5px;
+  color: var(--about-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.sr-about-header h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.sr-about-content {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sr-about-brand {
+  padding: 30px 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--about-border);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29, 69, 49, 0.95),
+      rgba(9, 31, 23, 0.98)
+    );
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.sr-about-logo {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--about-gold);
+  border-radius: 22px;
+  color: var(--about-gold);
+  background: rgba(217, 182, 107, 0.08);
+  font-size: 46px;
+  box-shadow: 0 0 25px rgba(217, 182, 107, 0.12);
+}
+
+.sr-about-brand h2 {
+  margin: 0;
+  color: var(--about-gold);
+  font-size: clamp(23px, 5vw, 31px);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.sr-about-brand > p {
+  margin: 9px 0 15px;
+  color: var(--about-muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.sr-about-version {
+  display: inline-block;
+  padding: 6px 13px;
+  border: 1px solid var(--about-border);
+  border-radius: 20px;
+  color: var(--about-gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sr-about-card {
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid var(--about-border);
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(21, 54, 41, 0.96),
+    rgba(11, 34, 26, 0.96)
+  );
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.13);
+}
+
+.sr-about-card h3 {
+  margin: 0 0 13px;
+  color: var(--about-gold);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.sr-about-card p {
+  margin: 0 0 11px;
+  color: var(--about-muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.sr-about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.sr-about-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sr-about-features li {
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--about-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.sr-about-features li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sr-about-founder {
+  text-align: center;
+  padding: 25px 18px;
+}
+
+.sr-about-label {
+  color: var(--about-gold) !important;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.sr-about-founder h3 {
+  margin: 7px 0;
+  font-size: 23px;
+}
+
+.sr-about-role {
+  margin-bottom: 20px !important;
+  color: var(--about-muted);
+}
+
+.sr-about-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  text-align: left;
+}
+
+.sr-about-social span {
+  color: var(--about-muted);
+  font-size: 12px;
+}
+
+.sr-about-social strong {
+  color: var(--about-gold);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.sr-about-notice {
+  border-color: rgba(217, 182, 107, 0.3);
+}
+
+.sr-about-footer {
+  padding: 18px 10px 5px;
+  text-align: center;
+}
+
+.sr-about-footer p {
+  margin: 5px 0;
+  color: var(--about-muted);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .sr-about-screen {
+    padding: 18px 12px 26px;
+  }
+
+  .sr-about-card {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .sr-about-brand {
+    padding: 25px 12px;
+  }
+
+  .sr-about-social strong {
+    max-width: 65%;
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-about-screen *,
+  .sr-about-screen *::before,
+  .sr-about-screen *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ================= FILE ENDING ================= */
