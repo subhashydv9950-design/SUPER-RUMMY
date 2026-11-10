@@ -1,0 +1,313 @@
+
+/* =========================================================
+   SUPER RUMMY — SETTINGS SCREEN STYLES
+   FILE: css/settings-screen.css
+   ========================================================= */
+
+.sr-settings-screen {
+  --settings-bg: #071b16;
+  --settings-panel: #102820;
+  --settings-border: rgba(218, 177, 91, 0.2);
+  --settings-gold: #d9b66b;
+  --settings-text: #f7f1df;
+  --settings-muted: #a8b8ad;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 24px 16px 32px;
+  box-sizing: border-box;
+  color: var(--settings-text);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(39, 103, 71, 0.28),
+      transparent 45%
+    ),
+    var(--settings-bg);
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+.sr-settings-screen * {
+  box-sizing: border-box;
+}
+
+.sr-settings-header {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sr-settings-back {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid var(--settings-border);
+  border-radius: 14px;
+  color: var(--settings-gold);
+  background: var(--settings-panel);
+  font-size: 25px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sr-settings-back:hover {
+  background: #1a3c2d;
+}
+
+.sr-settings-eyebrow {
+  margin: 0 0 5px;
+  color: var(--settings-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.sr-settings-header h1 {
+  margin: 0;
+  font-size: clamp(27px, 5vw, 36px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sr-settings-subtitle {
+  margin: 7px 0 0;
+  color: var(--settings-muted);
+  font-size: 13px;
+}
+
+.sr-settings-content {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sr-settings-group {
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid var(--settings-border);
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(21, 54, 41, 0.96),
+    rgba(11, 34, 26, 0.96)
+  );
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.sr-settings-group h2 {
+  margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--settings-border);
+  color: var(--settings-gold);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sr-settings-option {
+  position: relative;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  cursor: pointer;
+}
+
+.sr-settings-option:last-child {
+  border-bottom: none;
+}
+
+.sr-settings-option-info {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sr-settings-icon {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--settings-border);
+  border-radius: 12px;
+  background: rgba(217, 182, 107, 0.08);
+  font-size: 18px;
+}
+
+.sr-settings-option-info strong {
+  display: block;
+  color: var(--settings-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sr-settings-option-info small {
+  display: block;
+  margin-top: 4px;
+  color: var(--settings-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Toggle switch */
+
+.sr-settings-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.sr-settings-switch {
+  position: relative;
+  width: 46px;
+  height: 25px;
+  flex: 0 0 46px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  background: #35443d;
+  transition: background 0.2s ease;
+}
+
+.sr-settings-switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #d5ddd7;
+  transition: transform 0.2s ease;
+}
+
+.sr-settings-toggle:checked + .sr-settings-switch {
+  background: #a98236;
+  border-color: var(--settings-gold);
+}
+
+.sr-settings-toggle:checked + .sr-settings-switch::after {
+  transform: translateX(21px);
+  background: #fff7e5;
+}
+
+.sr-settings-toggle:focus-visible + .sr-settings-switch {
+  outline: 2px solid var(--settings-gold);
+  outline-offset: 4px;
+}
+
+/* Select controls */
+
+.sr-settings-select {
+  max-width: 145px;
+  min-width: 115px;
+  padding: 10px 27px 10px 11px;
+  border: 1px solid var(--settings-border);
+  border-radius: 10px;
+  outline: none;
+  color: var(--settings-text);
+  background: #0a2119;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sr-settings-select:focus {
+  border-color: var(--settings-gold);
+}
+
+.sr-settings-select option {
+  color: #fff;
+  background: #102820;
+}
+
+.sr-settings-footer {
+  padding: 12px 0 8px;
+  text-align: center;
+}
+
+.sr-settings-reset {
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid rgba(217, 182, 107, 0.5);
+  border-radius: 12px;
+  color: var(--settings-gold);
+  background: rgba(217, 182, 107, 0.08);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sr-settings-reset:hover {
+  color: #071b16;
+  background: var(--settings-gold);
+}
+
+.sr-settings-footer p {
+  margin: 18px 0 0;
+  color: var(--settings-muted);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .sr-settings-screen {
+    padding: 18px 12px 26px;
+  }
+
+  .sr-settings-header {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .sr-settings-group {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .sr-settings-option {
+    min-height: 64px;
+    gap: 8px;
+  }
+
+  .sr-settings-option-info {
+    gap: 9px;
+  }
+
+  .sr-settings-icon {
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+  }
+
+  .sr-settings-select {
+    min-width: 105px;
+    max-width: 125px;
+    padding: 9px 5px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-settings-screen *,
+  .sr-settings-screen *::before,
+  .sr-settings-screen *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ================= FILE ENDING ================= */
